@@ -226,44 +226,135 @@ const Workshops = () => {
           </div>
         </section>
 
-        {/* Booking Integration */}
+        {/* Enhanced Cal.com Booking Integration */}
         <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="section-title text-foreground mb-4">
                 Book Your Workshop Experience
               </h2>
               <p className="luxury-text text-muted-foreground">
-                Select your preferred date and time for an unforgettable fragrance creation journey
+                Select your preferred workshop and schedule your visit with our fragrance experts
               </p>
             </div>
 
-            {/* Cal.com Integration Placeholder */}
-            <div className="bg-card rounded-3xl shadow-premium overflow-hidden">
+            {/* Cal.com Workshop Booking Grid */}
+            <div 
+              id="workshop-booking" 
+              className="bg-card rounded-3xl shadow-premium overflow-hidden border-2 border-primary/20"
+            >
               <div className="bg-gradient-gold p-6 text-center">
                 <Calendar className="h-12 w-12 text-primary-foreground mx-auto mb-4" />
                 <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
                   Workshop Booking System
                 </h3>
                 <p className="text-primary-foreground/80">
-                  Choose your perfect workshop date and time
+                  Choose from our signature workshop experiences
                 </p>
               </div>
               
               <div className="p-8">
-                <div className="bg-accent/50 border-2 border-dashed border-primary/30 rounded-2xl p-12 text-center">
-                  <Calendar className="h-16 w-16 text-primary/50 mx-auto mb-4" />
-                  <p className="text-primary font-medium text-lg mb-2">
-                    📅 Cal.com Booking Widget Integration Placeholder
-                  </p>
-                  <p className="text-muted-foreground">
-                    Interactive calendar and booking system will be embedded here
-                  </p>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  {/* Workshop 1: Signature Scent Creation */}
+                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
+                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
+                      Signature Scent Creation
+                    </h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Create your personal fragrance (60 minutes)
+                    </p>
+                    <div className="bg-background rounded-lg p-4 mb-4">
+                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
+                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
+                        <p className="text-xs text-muted-foreground">
+                          Cal.com iframe would be embedded here:
+                        </p>
+                        <code className="text-xs text-primary">
+                          cal.com/ihsane-eddaou-bvwoc0/30min
+                        </code>
+                      </div>
+                    </div>
+                    <Button size="sm" className="btn-luxury w-full">
+                      Book 60-Min Session
+                    </Button>
+                  </div>
+
+                  {/* Workshop 2: Regional Perfume Journey */}
+                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
+                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
+                      Regional Perfume Journey
+                    </h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Explore scents from around the world (90 minutes)
+                    </p>
+                    <div className="bg-background rounded-lg p-4 mb-4">
+                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
+                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
+                        <p className="text-xs text-muted-foreground">
+                          Cal.com iframe would be embedded here:
+                        </p>
+                        <code className="text-xs text-primary">
+                          cal.com/ihsane-eddaou-bvwoc0/secret
+                        </code>
+                      </div>
+                    </div>
+                    <Button size="sm" className="btn-luxury w-full">
+                      Book 90-Min Journey
+                    </Button>
+                  </div>
+
+                  {/* Workshop 3: Private Group Experience */}
+                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
+                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
+                      Private Group Experience
+                    </h4>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Exclusive workshop for groups (120 minutes)
+                    </p>
+                    <div className="bg-background rounded-lg p-4 mb-4">
+                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
+                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
+                        <p className="text-xs text-muted-foreground">
+                          Cal.com iframe would be embedded here:
+                        </p>
+                        <code className="text-xs text-primary">
+                          cal.com/ihsane-eddaou-bvwoc0/15min
+                        </code>
+                      </div>
+                    </div>
+                    <Button size="sm" className="btn-luxury w-full">
+                      Book Group Session
+                    </Button>
+                  </div>
                 </div>
-                
-                <div className="mt-8 text-center">
-                  <Button size="lg" className="btn-luxury">
-                    Book Workshop Now
+
+                {/* Cal.com Integration Instructions */}
+                <div className="bg-accent/50 border-2 border-dashed border-primary/30 rounded-2xl p-8 text-center mb-6">
+                  <Calendar className="h-12 w-12 text-primary/50 mx-auto mb-4" />
+                  <h4 className="text-primary font-medium text-lg mb-3">
+                    📅 Cal.com Integration Ready
+                  </h4>
+                  <p className="text-muted-foreground mb-4">
+                    Replace the placeholder content above with actual Cal.com iframe embeds
+                  </p>
+                  
+                  <div className="bg-background rounded-lg p-4 text-left text-xs font-mono text-muted-foreground mb-4">
+                    <div className="text-primary mb-2">// Example iframe integration:</div>
+                    <div>&lt;iframe</div>
+                    <div className="ml-4">src="https://cal.com/ihsane-eddaou-bvwoc0/30min"</div>
+                    <div className="ml-4">width="100%"</div>
+                    <div className="ml-4">height="500px"</div>
+                    <div className="ml-4">frameborder="0"</div>
+                    <div>&gt;&lt;/iframe&gt;</div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-gold rounded-2xl p-6 text-center">
+                  <p className="text-primary-foreground font-medium">
+                    Can't find a suitable time? Contact us for custom scheduling!
+                  </p>
+                  <Button variant="outline" className="mt-3 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                    Request Custom Time
                   </Button>
                 </div>
               </div>

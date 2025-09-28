@@ -114,31 +114,58 @@ const FAQ = () => {
           </div>
         </section>
 
-        {/* Chatbot Integration Placeholder */}
+        {/* Retellai Chatbot Integration Section */}
         <section className="py-16 bg-gradient-elegant">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-card rounded-3xl p-8 shadow-premium text-center">
-              <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
-                Need Instant Answers?
-              </h2>
-              <p className="luxury-text text-muted-foreground mb-6">
-                Chat with our AI assistant for immediate help with your fragrance questions.
-              </p>
-              
-              {/* Retellai Chatbot Integration Placeholder */}
-              <div className="bg-accent/50 border-2 border-dashed border-primary/30 rounded-2xl p-8 mb-6">
-                <p className="text-primary font-medium">
-                  🤖 Retellai Chatbot Integration Placeholder
-                </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Interactive AI chat widget will be embedded here
+            <div 
+              id="retellai-chatbot" 
+              className="bg-card rounded-3xl shadow-premium overflow-hidden border-2 border-primary/20"
+            >
+              <div className="bg-gradient-gold p-6 text-center">
+                <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
+                  Chat with Aroma Luxe Support
+                </h3>
+                <p className="text-primary-foreground/80">
+                  Get instant answers about our perfumes, shipping, and workshops
                 </p>
               </div>
-
-              <Button className="btn-luxury">
-                Start Chat
-              </Button>
+              
+              <div className="p-8">
+                <div className="bg-accent/50 border-2 border-dashed border-primary/30 rounded-2xl p-12 text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary font-display font-bold text-2xl">AI</span>
+                  </div>
+                  <h4 className="text-primary font-medium text-lg mb-2">
+                    🤖 Retellai Chatbot Integration Placeholder
+                  </h4>
+                  <p className="text-muted-foreground mb-4">
+                    Interactive AI chatbot will be embedded here using your Retellai public key
+                  </p>
+                  
+                  {/* Retellai Integration Code Template */}
+                  <div className="bg-background rounded-lg p-4 text-left text-xs font-mono text-muted-foreground mb-4">
+                    <div className="text-primary mb-2">// Add this script to integrate Retellai:</div>
+                    <div>&lt;script</div>
+                    <div className="ml-4">src="https://widget.retellai.com/v1/script.js"</div>
+                    <div className="ml-4">data-public-key="YOUR_PUBLIC_KEY_HERE"</div>
+                    <div className="ml-4">data-agent-id="agent_dd6f316c4331845731df312197"</div>
+                    <div className="ml-4">data-title="Chat with Aroma Luxe Support"</div>
+                    <div className="ml-4">data-color="#D4AF37"</div>
+                    <div className="ml-4">data-bot-name="Aroma Luxe Support"</div>
+                    <div>&gt;&lt;/script&gt;</div>
+                  </div>
+                  
+                  <Button className="btn-luxury">
+                    Start Chat (Demo Mode)
+                  </Button>
+                </div>
+                
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    💡 <strong>Integration Ready:</strong> Simply add your Retellai public key to activate the live chatbot
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
