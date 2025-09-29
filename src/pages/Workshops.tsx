@@ -264,15 +264,13 @@ const Workshops = () => {
                       Create your personal fragrance (60 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
-                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
-                        <p className="text-xs text-muted-foreground">
-                          Cal.com iframe would be embedded here:
-                        </p>
-                        <code className="text-xs text-primary">
-                          cal.com/ihsane-eddaou-bvwoc0/30min
-                        </code>
-                      </div>
+                      <iframe 
+                        src="https://cal.com/ihsane-eddaou-bvwoc0/30min"
+                        width="100%" 
+                        height="500px"
+                        frameBorder="0"
+                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
+                      />
                     </div>
                     <Button size="sm" className="btn-luxury w-full">
                       Book 60-Min Session
@@ -288,15 +286,13 @@ const Workshops = () => {
                       Explore scents from around the world (90 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
-                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
-                        <p className="text-xs text-muted-foreground">
-                          Cal.com iframe would be embedded here:
-                        </p>
-                        <code className="text-xs text-primary">
-                          cal.com/ihsane-eddaou-bvwoc0/secret
-                        </code>
-                      </div>
+                      <iframe 
+                        src="https://cal.com/ihsane-eddaou-bvwoc0/secret"
+                        width="100%" 
+                        height="500px"
+                        frameBorder="0"
+                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
+                      />
                     </div>
                     <Button size="sm" className="btn-luxury w-full">
                       Book 90-Min Journey
@@ -312,15 +308,13 @@ const Workshops = () => {
                       Exclusive workshop for groups (120 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-lg p-8 text-center">
-                        <Calendar className="h-8 w-8 text-primary/50 mx-auto mb-2" />
-                        <p className="text-xs text-muted-foreground">
-                          Cal.com iframe would be embedded here:
-                        </p>
-                        <code className="text-xs text-primary">
-                          cal.com/ihsane-eddaou-bvwoc0/15min
-                        </code>
-                      </div>
+                      <iframe 
+                        src="https://cal.com/ihsane-eddaou-bvwoc0/15min"
+                        width="100%" 
+                        height="500px"
+                        frameBorder="0"
+                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
+                      />
                     </div>
                     <Button size="sm" className="btn-luxury w-full">
                       Book Group Session
@@ -328,26 +322,6 @@ const Workshops = () => {
                   </div>
                 </div>
 
-                {/* Cal.com Integration Instructions */}
-                <div className="bg-accent/50 border-2 border-dashed border-primary/30 rounded-2xl p-8 text-center mb-6">
-                  <Calendar className="h-12 w-12 text-primary/50 mx-auto mb-4" />
-                  <h4 className="text-primary font-medium text-lg mb-3">
-                    📅 Cal.com Integration Ready
-                  </h4>
-                  <p className="text-muted-foreground mb-4">
-                    Replace the placeholder content above with actual Cal.com iframe embeds
-                  </p>
-                  
-                  <div className="bg-background rounded-lg p-4 text-left text-xs font-mono text-muted-foreground mb-4">
-                    <div className="text-primary mb-2">// Example iframe integration:</div>
-                    <div>&lt;iframe</div>
-                    <div className="ml-4">src="https://cal.com/ihsane-eddaou-bvwoc0/30min"</div>
-                    <div className="ml-4">width="100%"</div>
-                    <div className="ml-4">height="500px"</div>
-                    <div className="ml-4">frameborder="0"</div>
-                    <div>&gt;&lt;/iframe&gt;</div>
-                  </div>
-                </div>
 
                 <div className="bg-gradient-gold rounded-2xl p-6 text-center">
                   <p className="text-primary-foreground font-medium">
