@@ -1,60 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, Award, MapPin, CheckCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
-
 const Workshops = () => {
-  const workshops = [
-    {
-      id: 1,
-      title: "Signature Scent Creation",
-      description: "Learn the fundamentals of perfumery and create your own unique 50ml fragrance",
-      duration: "3 hours",
-      participants: "Max 8 people",
-      price: "$150",
-      level: "Beginner",
-      nextDate: "March 15, 2024",
-      time: "2:00 PM - 5:00 PM",
-      spotsLeft: 3
-    },
-    {
-      id: 2,
-      title: "Advanced Blending Masterclass",
-      description: "Deep dive into complex fragrance composition with rare and precious ingredients",
-      duration: "4 hours",
-      participants: "Max 6 people",
-      price: "$250",
-      level: "Advanced",
-      nextDate: "March 22, 2024",
-      time: "1:00 PM - 5:00 PM",
-      spotsLeft: 2
-    },
-    {
-      id: 3,
-      title: "Couples Fragrance Experience",
-      description: "Create complementary fragrances together in this romantic workshop",
-      duration: "3.5 hours",
-      participants: "Max 6 couples",
-      price: "$280",
-      level: "All levels",
-      nextDate: "March 29, 2024",
-      time: "6:00 PM - 9:30 PM",
-      spotsLeft: 4
-    }
-  ];
-
-  const included = [
-    "Expert guidance from master perfumers",
-    "All premium ingredients and materials",
-    "50ml bottle of your custom fragrance",
-    "Professional perfumer consultation",
-    "Certificate of completion",
-    "Light refreshments and champagne",
-    "Digital fragrance formula for future orders",
-    "10% discount on future fragrance purchases"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const workshops = [{
+    id: 1,
+    title: "Signature Scent Creation",
+    description: "Learn the fundamentals of perfumery and create your own unique 50ml fragrance",
+    duration: "3 hours",
+    participants: "Max 8 people",
+    price: "$150",
+    level: "Beginner",
+    nextDate: "March 15, 2024",
+    time: "2:00 PM - 5:00 PM",
+    spotsLeft: 3
+  }, {
+    id: 2,
+    title: "Advanced Blending Masterclass",
+    description: "Deep dive into complex fragrance composition with rare and precious ingredients",
+    duration: "4 hours",
+    participants: "Max 6 people",
+    price: "$250",
+    level: "Advanced",
+    nextDate: "March 22, 2024",
+    time: "1:00 PM - 5:00 PM",
+    spotsLeft: 2
+  }, {
+    id: 3,
+    title: "Couples Fragrance Experience",
+    description: "Create complementary fragrances together in this romantic workshop",
+    duration: "3.5 hours",
+    participants: "Max 6 couples",
+    price: "$280",
+    level: "All levels",
+    nextDate: "March 29, 2024",
+    time: "6:00 PM - 9:30 PM",
+    spotsLeft: 4
+  }];
+  const included = ["Expert guidance from master perfumers", "All premium ingredients and materials", "50ml bottle of your custom fragrance", "Professional perfumer consultation", "Certificate of completion", "Light refreshments and champagne", "Digital fragrance formula for future orders", "10% discount on future fragrance purchases"];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="pt-24">
@@ -112,12 +95,9 @@ const Workshops = () => {
             </h2>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {workshops.map((workshop, index) => (
-                <div 
-                  key={workshop.id}
-                  className="bg-card rounded-3xl overflow-hidden shadow-premium hover-lift animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              {workshops.map((workshop, index) => <div key={workshop.id} className="bg-card rounded-3xl overflow-hidden shadow-premium hover-lift animate-fade-in" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
@@ -164,8 +144,7 @@ const Workshops = () => {
                       Reserve Your Spot
                     </Button>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -185,12 +164,10 @@ const Workshops = () => {
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {included.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {included.map((item, index) => <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
 
@@ -239,10 +216,7 @@ const Workshops = () => {
             </div>
 
             {/* Cal.com Workshop Booking Grid */}
-            <div 
-              id="workshop-booking" 
-              className="bg-card rounded-3xl shadow-premium overflow-hidden border-2 border-primary/20"
-            >
+            <div id="workshop-booking" className="bg-card rounded-3xl shadow-premium overflow-hidden border-2 border-primary/20">
               <div className="bg-gradient-gold p-6 text-center">
                 <Calendar className="h-12 w-12 text-primary-foreground mx-auto mb-4" />
                 <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
@@ -264,17 +238,9 @@ const Workshops = () => {
                       Create your personal fragrance (60 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe 
-                        src="https://cal.com/ihsane-eddaou-bvwoc0/30min"
-                        width="100%" 
-                        height="500px"
-                        frameBorder="0"
-                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
-                      />
+                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/30min" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
                     </div>
-                    <Button size="sm" className="btn-luxury w-full">
-                      Book 60-Min Session
-                    </Button>
+                    
                   </div>
 
                   {/* Workshop 2: Regional Perfume Journey */}
@@ -286,17 +252,9 @@ const Workshops = () => {
                       Explore scents from around the world (90 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe 
-                        src="https://cal.com/ihsane-eddaou-bvwoc0/secret"
-                        width="100%" 
-                        height="500px"
-                        frameBorder="0"
-                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
-                      />
+                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/secret" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
                     </div>
-                    <Button size="sm" className="btn-luxury w-full">
-                      Book 90-Min Journey
-                    </Button>
+                    
                   </div>
 
                   {/* Workshop 3: Private Group Experience */}
@@ -308,17 +266,9 @@ const Workshops = () => {
                       Exclusive workshop for groups (120 minutes)
                     </p>
                     <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe 
-                        src="https://cal.com/ihsane-eddaou-bvwoc0/15min"
-                        width="100%" 
-                        height="500px"
-                        frameBorder="0"
-                        className="rounded-lg sm:h-[400px] lg:h-[500px]"
-                      />
+                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/15min" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
                     </div>
-                    <Button size="sm" className="btn-luxury w-full">
-                      Book Group Session
-                    </Button>
+                    
                   </div>
                 </div>
 
@@ -358,8 +308,6 @@ const Workshops = () => {
           </div>
         </section>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Workshops;
