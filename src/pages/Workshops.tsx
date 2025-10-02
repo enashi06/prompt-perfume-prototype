@@ -4,10 +4,11 @@ import { Calendar, Clock, Users, Award, MapPin, CheckCircle } from "lucide-react
 import Navigation from "@/components/Navigation";
 import FloatingChatBubble from "@/components/FloatingChatBubble";
 import CalBookingModal from "@/components/CalBookingModal";
-
 const Workshops = () => {
-  const [selectedWorkshop, setSelectedWorkshop] = useState<{ calLink: string; title: string } | null>(null);
-
+  const [selectedWorkshop, setSelectedWorkshop] = useState<{
+    calLink: string;
+    title: string;
+  } | null>(null);
   const workshops = [{
     id: 1,
     title: "Signature Scent Creation",
@@ -49,12 +50,7 @@ const Workshops = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       <FloatingChatBubble />
-      <CalBookingModal
-        isOpen={!!selectedWorkshop}
-        onClose={() => setSelectedWorkshop(null)}
-        calLink={selectedWorkshop?.calLink || ""}
-        title={selectedWorkshop?.title || ""}
-      />
+      <CalBookingModal isOpen={!!selectedWorkshop} onClose={() => setSelectedWorkshop(null)} calLink={selectedWorkshop?.calLink || ""} title={selectedWorkshop?.title || ""} />
       
       <main className="pt-24">
         {/* Header Section */}
@@ -156,10 +152,10 @@ const Workshops = () => {
                       </span>
                     </div>
 
-                    <Button 
-                      className="btn-luxury w-full"
-                      onClick={() => setSelectedWorkshop({ calLink: workshop.calLink, title: workshop.title })}
-                    >
+                    <Button className="btn-luxury w-full" onClick={() => setSelectedWorkshop({
+                  calLink: workshop.calLink,
+                  title: workshop.title
+                })}>
                       Reserve Your Spot
                     </Button>
                   </div>
@@ -223,87 +219,7 @@ const Workshops = () => {
         </section>
 
         {/* Enhanced Cal.com Booking Integration */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="section-title text-foreground mb-4">
-                Book Your Workshop Experience
-              </h2>
-              <p className="luxury-text text-muted-foreground">
-                Select your preferred workshop and schedule your visit with our fragrance experts
-              </p>
-            </div>
-
-            {/* Cal.com Workshop Booking Grid */}
-            <div id="workshop-booking" className="bg-card rounded-3xl shadow-premium overflow-hidden border-2 border-primary/20">
-              <div className="bg-gradient-gold p-6 text-center">
-                <Calendar className="h-12 w-12 text-primary-foreground mx-auto mb-4" />
-                <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
-                  Workshop Booking System
-                </h3>
-                <p className="text-primary-foreground/80">
-                  Choose from our signature workshop experiences
-                </p>
-              </div>
-              
-              <div className="p-8">
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  {/* Workshop 1: Signature Scent Creation */}
-                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
-                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
-                      Signature Scent Creation
-                    </h4>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Create your personal fragrance (60 minutes)
-                    </p>
-                    <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/30min" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
-                    </div>
-                    
-                  </div>
-
-                  {/* Workshop 2: Regional Perfume Journey */}
-                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
-                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
-                      Regional Perfume Journey
-                    </h4>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Explore scents from around the world (90 minutes)
-                    </p>
-                    <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/secret" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
-                    </div>
-                    
-                  </div>
-
-                  {/* Workshop 3: Private Group Experience */}
-                  <div className="bg-accent/30 rounded-2xl p-6 text-center border border-primary/20">
-                    <h4 className="font-display text-lg font-semibold text-primary mb-3">
-                      Private Group Experience
-                    </h4>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Exclusive workshop for groups (120 minutes)
-                    </p>
-                    <div className="bg-background rounded-lg p-4 mb-4">
-                      <iframe src="https://cal.com/ihsane-eddaou-bvwoc0/15min" width="100%" height="500px" frameBorder="0" className="rounded-lg sm:h-[400px] lg:h-[500px]" />
-                    </div>
-                    
-                  </div>
-                </div>
-
-
-                <div className="bg-gradient-gold rounded-2xl p-6 text-center">
-                  <p className="text-primary-foreground font-medium">
-                    Can't find a suitable time? Contact us for custom scheduling!
-                  </p>
-                  <Button variant="outline" className="mt-3 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                    Request Custom Time
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Contact Information */}
         <section className="py-16 bg-gradient-dark text-secondary-foreground">
