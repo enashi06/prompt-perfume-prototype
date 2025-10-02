@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, MessageCircle, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import RetellVoiceChat from "@/components/RetellVoiceChat";
+import FloatingChatBubble from "@/components/FloatingChatBubble";
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);
@@ -61,6 +61,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <FloatingChatBubble />
       
       <main className="pt-24">
         {/* Header Section */}
@@ -112,13 +113,6 @@ const FAQ = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Retell AI Voice Chat Section */}
-        <section className="py-16 bg-gradient-elegant">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RetellVoiceChat />
           </div>
         </section>
 
