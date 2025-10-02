@@ -1,1 +1,4 @@
 project_id = "zpblcvshtbdctehpytgr"
+
+[functions.create-retell-call]
+verify_jwt = false
