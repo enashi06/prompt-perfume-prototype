@@ -7,11 +7,13 @@ import BrandStory from "@/components/BrandStory";
 import FeaturedPerfumes from "@/components/FeaturedPerfumes";
 import WorkshopCTA from "@/components/WorkshopCTA";
 import Footer from "@/components/Footer";
+import FloatingChatBubble from "@/components/FloatingChatBubble";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <FloatingChatBubble />
       <HeroSection />
       <BrandStory />
       <FeaturedPerfumes />

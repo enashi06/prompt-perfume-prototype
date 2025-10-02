@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Star, ShoppingCart, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingChatBubble from "@/components/FloatingChatBubble";
 
 interface Perfume {
   id: string;
@@ -434,6 +435,7 @@ const Collections = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <FloatingChatBubble />
       
       <main className="pt-24">
         {/* Header Section */}

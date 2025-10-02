@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, Award, MapPin, CheckCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import FloatingChatBubble from "@/components/FloatingChatBubble";
+import CalBookingModal from "@/components/CalBookingModal";
+
 const Workshops = () => {
+  const [selectedWorkshop, setSelectedWorkshop] = useState<{ calLink: string; title: string } | null>(null);
+
   const workshops = [{
     id: 1,
     title: "Signature Scent Creation",
@@ -12,7 +18,8 @@ const Workshops = () => {
     level: "Beginner",
     nextDate: "March 15, 2024",
     time: "2:00 PM - 5:00 PM",
-    spotsLeft: 3
+    spotsLeft: 3,
+    calLink: "https://cal.com/ihsane-eddaou-bvwoc0/30min"
   }, {
     id: 2,
     title: "Advanced Blending Masterclass",
@@ -23,7 +30,8 @@ const Workshops = () => {
     level: "Advanced",
     nextDate: "March 22, 2024",
     time: "1:00 PM - 5:00 PM",
-    spotsLeft: 2
+    spotsLeft: 2,
+    calLink: "https://cal.com/ihsane-eddaou-bvwoc0/secret"
   }, {
     id: 3,
     title: "Couples Fragrance Experience",
@@ -34,11 +42,19 @@ const Workshops = () => {
     level: "All levels",
     nextDate: "March 29, 2024",
     time: "6:00 PM - 9:30 PM",
-    spotsLeft: 4
+    spotsLeft: 4,
+    calLink: "https://cal.com/ihsane-eddaou-bvwoc0/15min"
   }];
   const included = ["Expert guidance from master perfumers", "All premium ingredients and materials", "50ml bottle of your custom fragrance", "Professional perfumer consultation", "Certificate of completion", "Light refreshments and champagne", "Digital fragrance formula for future orders", "10% discount on future fragrance purchases"];
   return <div className="min-h-screen bg-background">
       <Navigation />
+      <FloatingChatBubble />
+      <CalBookingModal
+        isOpen={!!selectedWorkshop}
+        onClose={() => setSelectedWorkshop(null)}
+        calLink={selectedWorkshop?.calLink || ""}
+        title={selectedWorkshop?.title || ""}
+      />
       
       <main className="pt-24">
         {/* Header Section */}
@@ -140,7 +156,10 @@ const Workshops = () => {
                       </span>
                     </div>
 
-                    <Button className="btn-luxury w-full">
+                    <Button 
+                      className="btn-luxury w-full"
+                      onClick={() => setSelectedWorkshop({ calLink: workshop.calLink, title: workshop.title })}
+                    >
                       Reserve Your Spot
                     </Button>
                   </div>
