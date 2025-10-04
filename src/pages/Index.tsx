@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import BrandStory from "@/components/BrandStory";
 import FeaturedPerfumes from "@/components/FeaturedPerfumes";
+import RequestProposal from "@/components/RequestProposal";
 import WorkshopCTA from "@/components/WorkshopCTA";
 import Footer from "@/components/Footer";
 import FloatingChatBubble from "@/components/FloatingChatBubble";
@@ -38,6 +39,7 @@ const Index = () => {
         </div>
       </section>
 
+      <RequestProposal />
       <WorkshopCTA />
       <Footer />
     </div>
